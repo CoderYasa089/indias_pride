@@ -1,0 +1,229 @@
+/* =========================================
+   GENERAL STYLES FOR ALL PAGES
+   ========================================= */
+   body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Default background for other pages */
+}
+
+/* Make sure the homepage body can fill the screen */
+html, body.home {
+    height: 100%;
+}
+
+/* The fixed navigation bar used on ALL pages */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    z-index: 10; /* Ensure it's on top of everything */
+}
+
+.top-nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.top-nav a:hover {
+    background-color: #555;
+}
+
+/* Footer used on ALL pages */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* =========================================
+   HOMEPAGE-ONLY STYLES (`index.php`)
+   ========================================= */
+.bg-image {
+    background-image: url('images/indian_food_platter.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.display-middle {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker for better contrast */
+    border-radius: 8px;
+    color: white;
+}
+
+.main-title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.sub-title {
+    font-size: 18px;
+}
+
+.display-bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+}
+
+.timings {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.menu-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #333;
+}
+
+
+/* =========================================
+   CONTENT PAGES (`menu.php`, `booking.php`, etc.)
+   ========================================= */
+.page-header {
+    padding-top: 80px; /* Push title below fixed nav */
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* This container holds the main content for non-home pages */
+.container {
+    width: 90%; /* Takes up more width */
+    max-width: 1100px; /* But not too wide on very large screens */
+    margin: 20px auto; /* Center the container */
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-category {
+    margin-bottom: 2rem;
+}
+
+.menu-category h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+form {
+    background: transparent; /* Remove double background */
+    padding: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Important for consistent sizing */
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.order-notes {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 15px;
+}
+/* =========================================
+   ABOUT PAGE STYLES
+   ========================================= */
+
+   .chef-section {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between image and text */
+    flex-wrap: wrap; /* Allows it to stack on smaller screens */
+}
+
+.chef-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Prevents the image from stretching */
+    border: 3px solid #ddd;
+}
+
+.chef-section div {
+    flex: 1; /* Allows text to take up remaining space */
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: calc(25% - 12px); /* Creates a 4-column layout with gaps */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.full-width-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
